@@ -1,0 +1,38 @@
+<!--pages/about/about.wxml-->
+<view class="body">
+  <image class="intro-img" mode="widthFix" src="../../images/DSA.png"></image>
+
+  <view class="header">
+    <image mode="scaleToFill" src="../../images/about.jpg"></image>
+    <!--<swiper indicator-dots="true" indicator-active-color="#ffffff">
+      <block wx:for="{{array}}" wx:for-item="item">
+        <swiper-item>
+          <image  mode="scaleToFill" src="{{item.img}}"/>
+          <text>Text example</text>
+        </swiper-item>
+      </block>
+    </swiper>-->
+  </view>
+  <view class="about container">
+    <van-row>
+      <van-col span="8">
+        <text class="title">{{language.about_title}}</text>
+      </van-col>
+      <van-col span="8">
+        <picker mode="selector" range="{{languages}}" value="{{langIndex}}" bindchange="changeLanguage">
+          <view class="picker">{{language.language}}: {{langIndex == 0 ? languages[0] : languages[1]}}</view>
+        </picker>
+      </van-col>
+    </van-row>
+    <van-row>
+      <van-col span="24">
+        <text class="paragraph">
+          {{language.about_paragraph}}
+        </text>
+      </van-col>
+    </van-row>
+  </view>
+  <view class="footer">
+    <text>© 1992-2018 Dezan Shira & Associates All Rights Reserved.</text>
+  </view>
+</view>

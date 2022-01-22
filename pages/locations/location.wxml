@@ -1,0 +1,90 @@
+<!--pages/locations/location.wxml-->
+  <view class="body">
+    <image class="intro-img" mode="widthFix" src="../../images/DSA.png"></image>
+
+    <view class="locationList">
+      <view class="filter-buttons">
+        <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker" id="icon-location">
+            <!--<van-icon size="1.5em" name="location" />-->
+            <image class="icon-image" src="../../images/icon-location.png"/>
+          </view>
+        </picker>
+        <picker mode="selector" bindchange="changeLanguage" value="{{langIndex}}" range="{{languages}}">
+          <view class="picker" id="icon-language">
+            <!--<van-icon size="1.5em" name="more-o"/>-->
+            <image class="icon-image" src="../../images/icon-language.png"/>
+          </view>
+        </picker>
+      </view>
+      
+      <block wx:for="{{contactList}}" wx:for-item="item">
+          <block wx:if="{{item.category}}">
+            <view class="country-tag">
+              <text>{{item.category[langIndex]}}</text>
+            </view>
+          </block>
+
+          <van-row class="contactCard">
+            <van-col class="image-container"span="6">
+              <image class="img-office" mode="widthFix" src="{{item.image}}"></image>
+            </van-col>
+            
+            <van-col span="18" class="info-card">
+              <van-row>
+                <van-col id="title_city" class="data" span="23" offset="1">
+                  <text class="title_city">{{item.city[langIndex]}}</text>
+                </van-col>
+
+                <block wx:if="{{item.tel}}">
+                  <van-col class="data" span="22" offset="1" id="{{item.tel}}" bindtap="makeCall">
+                    <van-col span="2">
+                      <van-icon name="phone" color="#0b2741"/>
+                    </van-col>
+                    <van-col span="20">
+                      <text class="phone">{{item.tel}}</text>
+                    </van-col>
+                    <van-col span="2" class="arrow">
+                      <van-icon name="arrow" size="10px"/>
+                    </van-col>
+                  </van-col>
+                </block>
+                
+                <!--<block wx:if="{{item.email}}">
+                  <van-col class="data" span="22" offset="1">
+                    <van-col span="2">
+                      <van-icon name="email"/>
+                    </van-col>
+                    <van-col span="20">
+                      <text class="email">{{item.email}}</text>
+                    </van-col>
+                    <van-col span="2" class="arrow">
+                      <van-icon name="arrow" size="10px"/>
+                    </van-col>
+                  </van-col>
+                </block>-->
+
+                <block wx:if="{{item.address}}">
+                  <van-col class="data" span="22" offset="1" bindtap="openLocation" data-lat='{{item.lat}}' data-lon='{{item.lon}}'>
+                    <van-col span="2">
+                      <van-icon name="location" color="#0b2741"/>
+                    </van-col>
+                    <van-col span="20">
+                      <text class="address">{{item.address[langIndex]}}</text>
+                    </van-col>
+                    <van-col span="2" class="arrow">
+                      <van-icon name="arrow" size="10px"/>
+                    </van-col>
+                  </van-col>
+                </block>
+              </van-row>
+            </van-col>
+          </van-row>
+      </block>
+    </view>
+    
+    <view class="footer">
+      <text>© 1992-2018 Dezan Shira & Associates All Rights Reserved.</text>
+    </view>
+
+  </view><!--end of body-->

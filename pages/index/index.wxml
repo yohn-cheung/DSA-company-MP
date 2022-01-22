@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<view class="body">
+  <image class="intro-img" mode="widthFix" src="../../images/DSA.png"></image>
+  <view class="header">
+    <!--<image class="intro-img" mode="aspectFill" src="../../images/index.jpg"></image>-->
+      <video src="{{url}}" poster="../../images/index.jpg"></video>
+  </view>
+
+  <view class="intro container">
+    <van-row>
+      <van-col span="16">
+        <text class="title">{{language.intro_title}}</text>
+      </van-col>
+      <van-col span="8">
+        <picker mode="selector" range="{{languages}}" value="{{langIndex}}" bindchange="changeLanguage">
+          <view class="picker">{{language.language}}: {{langIndex == 0 ? languages[0] : languages[1]}}</view>
+        </picker>
+      </van-col>
+    </van-row>
+    <van-row>
+      <van-col span="24">
+       <text class="paragraph">
+          {{language.intro_paragraph}}
+        </text>
+      </van-col>
+    </van-row>
+  </view>
+  <view class="navigation">
+    <van-row class="row">
+      <van-col span="8" bindtap="about">
+        <view class="block">
+          <image class="icon" mode="widthFix" src="../../images/nav/about-us-01.png"/>
+          <text class="link">
+            {{language.nav_about_us}}
+          </text>
+        </view>
+      </van-col>
+
+      <van-col span="8" class="services" bindtap="services">
+        <view class="block">
+          <image class="icon" mode="widthFix" src="../../images/nav/services-01.png"/>
+          <text class="link">
+            {{language.nav_services}}
+          </text>
+        </view>  
+      </van-col>
+
+      <van-col span="8" bindtap="locations">
+        <view class="block">
+          <image class="icon" mode="widthFix"
+          src="../../images/nav/locations-01.png"/>
+          <text class="link">
+            {{language.nav_locations}}
+          </text>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+
+  <view class="slider">
+     <image bindtap='copy' class="banner-image" mode="widthFix" src="../../images/{{language.image_wechat}}"/>
+  </view>
+
+  <view class="tools">
+    <view class="tools-header">
+      <image class="img-calculator" mode="widthFix"  src="../../images/nav/calculator-01.png"/>
+      <text class="tools_title">{{language.tools}}</text>
+    </view>
+
+    <van-button class="calculator button" bindtap="calculator" id="https://www.dezshira.com/library/investor_tools/tax_ro_vs_wfoe">
+      {{language.ro_vs_wfoe}}
+    </van-button>
+
+    <van-button class="calculator button" bindtap="calculator"  id="https://www.dezshira.com/library/investor_tools/individual_income_tax_china">
+      {{language.iit}}
+    </van-button>
+
+    <van-button class="calculator button" bindtap="calculator"  id="https://www.dezshira.com/library/investor_tools/registered_capital_and_total_investment_calculators">
+      {{language.cap_and_total}}
+    </van-button>
+
+    <van-button class="calculator button" bindtap="calculator" id="https://www.dezshira.com/library/investor_tools/visa_tier_calculator_china">
+      {{language.visa}}
+    </van-button>
+  </view>
+
+  <view class="footer">
+    <text>© 1992-2018 Dezan Shira & Associates All Rights Reserved.</text>
+  </view>
+</view>

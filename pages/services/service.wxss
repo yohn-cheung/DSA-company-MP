@@ -1,0 +1,141 @@
+/* pages/services/service.wxss */
+page{
+  height: 100%;
+}
+
+.background-img{
+  position: relative;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+}
+
+.background-opacity{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(19, 39, 64, 0.4);
+}
+
+.picker{
+  font-size: 20rpx;
+  height:     40rpx;
+  line-height: 42rpx;
+  
+  position: absolute;
+  right: 50rpx;
+  z-index: 100;
+  background: #ffffff;
+  
+  margin-top:2%; 
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+swiper{
+  min-height: 100%;
+}
+
+.figure{
+  margin-top: 20%;
+}
+
+/*image{
+  position: relative;
+  z-index: -100;
+  
+  width: 100%;
+  min-height: 100%;
+  display: block;
+}
+
+/*.content{
+  position: absolute;
+  top: 15%;
+}*/
+
+.title, .desc{
+  color: #ffffff;
+}
+
+.title{
+  font-family: 'Acumin-RPro';
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.desc{
+  font-size: 30rpx;
+}
+
+/*
+.flyer{
+  color: #ffffff;
+  background: #314D77;
+}
+
+.buttons{
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+button{
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 5%;
+
+  /*position: absolute;
+  bottom: 5%;
+}*/
+
+.van-button, .brochure{
+  width: 100% !important;
+  margin-top: 2.5% !important;
+}
+
+.buttons{
+  position:absolute;
+  bottom: 260rpx;
+  width: 100%
+}
+
+
+button{
+  color: #ffffff !important;
+  /*background: #217fd4 !important;*/
+  border: none !important;
+  font-family: 'NimbusSanL';
+  font-weight: 200;
+}
+
+.download_brochure{
+  height:44px;
+  line-height:42px;
+
+  padding:0 15px;
+
+  color: #ffffff !important;
+  border: none !important;
+
+  font-family: 'NimbusSanL';
+  font-weight: 200;
+
+  background: #1a2940 !important;
+
+  font-size:14px;
+ 
+  text-align:center;
+  vertical-align:middle;
+
+}
+
+/*.download > button{
+  background: #1a2940 !important; 
+}*/
+
+.contact > button{
+  background: #1e71bd !important;
+}

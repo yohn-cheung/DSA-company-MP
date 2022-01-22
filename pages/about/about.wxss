@@ -1,0 +1,53 @@
+/* pages/about/about.wxss */
+page{
+  height:100%;
+}
+
+.body{ 
+  min-height:100%; 
+  padding:0; 
+  margin:0; 
+  position:relative; 
+}
+
+.body::after{ 
+  content:''; 
+  display:block; 
+  height:30px; 
+}
+.intro-img{
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+image{
+  width: 100%;
+  z-index: -100;
+}
+
+.picker{
+  font-size: 20rpx;
+  height:     40rpx;
+  line-height: 42rpx;
+  position: absolute;
+  right: 50rpx;
+}
+
+.title{
+  font-family: 'Acumin-RPro';
+  font-weight: bold;
+}
+
+.footer{
+  color: rgb(217, 218, 214);
+  font-size: 20rpx;
+  text-align: center;
+
+  z-index: -10;
+
+  position:absolute; 
+  bottom:0; 
+  width:100%; 
+  height:30px; 
+}

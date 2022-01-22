@@ -1,0 +1,99 @@
+<swiper indicator-dots="true" indicator-active-color="#ffffff">
+    <block wx:for="{{array}}" wx:for-item="item" wx:for-index="idx">
+      <swiper-item>
+          <image src="{{item.img}}" mode="aspectFill" class="background-img">
+            <view class="background-opacity">
+            <picker mode="selector" range="{{languages}}" value="{{langIndex}}" bindchange="changeLanguage">
+          <view class="picker">{{language.language}}: {{langIndex == 0 ? languages[0] : languages[1]}}</view>
+        </picker>
+              <view class="figure">
+                <van-row>
+                  <van-col span="20" offset="2">
+                    <text class="title">
+                      <block wx:if="{{idx == 0}}">
+                        {{language.bi_title}}
+                      </block>
+                      <block wx:if="{{idx == 1}}">
+                        {{language.ces_title}}
+                      </block>
+                      <block wx:if="{{idx == 2}}">
+                        {{language.dd_title}}
+                      </block>
+                      <block wx:if="{{idx == 3}}">
+                        {{language.acc_title}}
+                      </block>
+                      <block wx:if="{{idx == 4}}">
+                        {{language.hr_title}}
+                        {{language.hr_title2}}
+                      </block>
+                      <block wx:if="{{idx == 5}}">
+                        {{language.tax_title}}
+                      </block>
+                      <block wx:if="{{idx == 6}}">
+                        {{language.ara_title}}
+                      </block>
+                      <block wx:if="{{idx == 7}}">
+                        {{language.tech_title}}
+                      </block>
+                      <block wx:if="{{idx == 8}}">
+                        {{language.odi_title}}
+                      </block>
+                    </text>
+                  </van-col>
+                </van-row>
+                <van-row>
+                  <van-col span="20" offset="2">
+                    <text class="desc">
+                      <block wx:if="{{idx == 0}}">
+                        {{language.bi_desc}}
+                      </block>
+                      <block wx:if="{{idx == 1}}">
+                      {{language.ces_desc}}
+                      </block>
+                      <block wx:if="{{idx == 2}}">
+                        {{language.dd_desc}}
+                      </block>
+                      <block wx:if="{{idx == 3}}">
+                        {{language.acc_desc}}
+                      </block>
+                      <block wx:if="{{idx == 4}}">
+                        {{language.hr_desc}}
+                      </block>
+                      <block wx:if="{{idx == 5}}">
+                        {{language.tax_desc}}
+                      </block>
+                      <block wx:if="{{idx == 6}}">
+                        {{language.ara_desc}}
+                      </block>
+                      <block wx:if="{{idx == 7}}">
+                        {{language.tech_desc}}
+                      </block>
+                      <block wx:if="{{idx == 8}}">
+                        {{language.odi_desc}}
+                      </block>
+                    </text>
+                  </van-col>
+                </van-row>
+                
+                <van-row class="buttons">
+                  <van-col span="20" offset="2">
+                    <picker class="brochure" mode="selector" range="{{folders}}" value="{{folderIndex}}" bindchange="clickFolder">
+                      <view class="download_brochure" >
+                        {{language.download_brochure}}
+                      </view>
+                    </picker>
+                    <!--<van-button class="download" bindtap="openFlyer">
+                    </van-button>-->
+                  </van-col>
+                  <van-col span="20" offset="2">
+                    <van-button class="contact" bindtap="contact" id="https://www.dezshira.com/contact">
+                      {{language.contact_us}}
+                    </van-button>
+                  </van-col>
+                </van-row>
+              </view>
+            </view>
+          </image>
+      </swiper-item>
+    </block>
+</swiper>

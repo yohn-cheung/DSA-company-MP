@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-row": "../../dist/row/index",
+    "van-col": "../../dist/col/index"
+  },
+      "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "About us",
+        "navigationBarTextStyle": "black"
+      }
+}
